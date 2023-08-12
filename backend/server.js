@@ -1,9 +1,18 @@
+import userRoutes from './routes/userRoutes.js'
 import express from 'express';
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'
+
+const app=express();
 dotenv.config()
 
-const PORT =process.env.PORT||7000
 
-const app=express()
-app.get('/',(req,res)=>res.send('server is ready'));
-app.listen(PORT,()=>console.log(`server started on port ${PORT}`))
+
+app.use('/api/users',userRoutes)
+app.get('/',(req,res)=>res.send('server is running'));
+
+
+
+
+const PORT =process.env.PORT||8000
+app.listen(PORT,()=>console.log(`PORT is running on ${PORT}`))
+ 
