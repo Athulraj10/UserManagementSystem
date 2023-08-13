@@ -7,7 +7,7 @@ import generateToken from '../utils/generateToken.js';
 // @access  Public
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
-  console.log(req.body)
+    console.log(req.body)
   const user = await User.findOne({ email });
 
   if (user && (await user.matchPassword(password))) {
@@ -17,7 +17,6 @@ const authUser = asyncHandler(async (req, res) => {
       _id: user._id,
       name: user.name,
       email: user.email,
-      image: user.imagePath?user.imagePath:null
     });
   } else {
     res.status(401);
@@ -61,60 +60,46 @@ const registerUser = asyncHandler(async (req, res) => {
 // @desc    Logout user / clear cookie
 // @route   POST /api/users/logout
 // @access  Public
-const logoutUser = (req, res) => {
-  res.cookie('jwt', '', {
-    httpOnly: true,
-    expires: new Date(0),
-  });
-  res.status(200).json({ message: 'Logged out successfully' });
-};
+const logoutUser = asyncHandler(async(req, res) => {
+  res.cookie('jwt','',{
+    httpOnly:true,
+    expires:new Date(0)
+  })
+  res.status(200).json({message:'user Logout Successfully'})
+});
 
 // @desc    Get user profile
 // @route   GET /api/users/profile
 // @access  Private
 const getUserProfile = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id);
-
-  if (user) {
-    res.json({
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-    });
-  } else {
-    res.status(404);
-    throw new Error('User not found');
-  }
+ const user={
+  _id:req.user._id,
+  name:req.user.name,
+  email:req.user.email
+ }
+ res.status(200).json(user)
 });
 
 // @desc    Update user profile
 // @route   PUT /api/users/profile
 // @access  Private
 const updateUserProfile = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.body._id);
-  if (user) {
-    user.name = req.body.name || user.name;
-    user.email = req.body.email || user.email;
-
-    if(req.file){
-      user.imagePath = req.file.filename || user.imagePath;
-     }
-
-    if (req.body.password) {
-      user.password = req.body.password;
+  const user=await User.findById(req.user._id);
+  if(user){
+    user.name=req.body.name||user.name;
+    user.email=req.body.email||user.email;
+    if(req.body.password){
+      user.password=req.body.password;
     }
-
-    const updatedUser = await user.save();
-
-    res.json({
-      _id: updatedUser._id,
-      name: updatedUser.name,
-      email: updatedUser.email,
-      image: updatedUser.imagePath
-    });
-  } else {
+    const updatedUser=await user.save();
+    res.status(200).json({
+      _id:updatedUser._id,
+      name:updatedUser.name,
+      email:updatedUser.email
+    })
+  }else{
     res.status(404);
-    throw new Error('User not found');
+    throw new Error('User Not Fount')
   }
 });
 export {
