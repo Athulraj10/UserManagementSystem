@@ -1,7 +1,11 @@
-import {useState} from 'react'
-import { Link } from 'react-router-dom'
+import {useState,useEffect} from 'react'
+import { Link ,useNavigate} from 'react-router-dom'
 import {Form,Button,Row,Col} from 'react-bootstrap'
 import FromContainer from '../components/FormContainer'
+import { useSelector,useDispatch } from 'react-redux'
+import { useLoginMutation } from '../slices/usersApiSlice'
+import { setCredentials } from '../slices/authSlice'
+
 
 const loginScreen=()=>{
     const [email,setEmail]=useState('')
@@ -9,9 +13,27 @@ const loginScreen=()=>{
 
     const submitHandler=async(e)=>{
         e.preventDefault();
-        console.log('submit')
+        try {
+ const res=await login({email,password}).unwrap();
+            dispatch(setCredentials({...res}))
+            navigate('/')
+        } catch (error) {
+            console.log(error?data?message || error.message)
+        }
     }
 
+    useEffect(()=>{
+        if(userInfo){
+            navigate('/')
+        }
+    },[navigate,userInfo])
+
+    const navigate = useNavigate();
+    const dispatch=useDispatch();
+
+    const  [login,{isloading}] = useLoginMutation();
+
+    const {userInfo} =useSelector((state)=>state.auth);
     return(
         <FromContainer>
             <h1>Sign IN</h1>
