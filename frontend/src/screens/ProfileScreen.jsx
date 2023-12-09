@@ -43,3 +43,6 @@ const ProfileScreen = () => {
         formData.append('file', image);
 
         const res = await updateProfile(formData).unwrap();
+
+        dispatch(setCredentials(res));
+        toast.success("Profile updated successfully");
