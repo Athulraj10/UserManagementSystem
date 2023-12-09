@@ -43,4 +43,7 @@ const RegisterScreen = () => {
         }
     }
   }
+  return (
+    <FormContainer>
+        <h1>Sign Up</h1>
  
