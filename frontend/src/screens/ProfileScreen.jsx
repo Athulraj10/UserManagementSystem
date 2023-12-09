@@ -102,3 +102,5 @@ const ProfileScreen = () => {
               onChange={(e) => setImage(e.target.files[0])}
             ></Form.Control>
           </Form.Group>
+
+          {isLoading && <Loader/>}
