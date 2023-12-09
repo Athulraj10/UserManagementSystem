@@ -17,3 +17,5 @@ const ProfileScreen = () => {
   const [image, setImage] = useState('')
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
