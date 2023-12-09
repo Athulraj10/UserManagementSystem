@@ -19,3 +19,5 @@ const ProfileScreen = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const {userInfo} = useSelector((state)=>state.auth)
+
