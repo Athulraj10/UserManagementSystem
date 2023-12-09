@@ -28,3 +28,9 @@ const ProfileScreen = () => {
    setEmail(userInfo.email);
   },[userInfo.setName,userInfo.setEmail]);
 
+
+  const submitHandler = async(e)=>{
+    e.preventDefault();
+    if(password !== confirmPassword){
+        toast.error('Passwords do not match!!')
+    }
