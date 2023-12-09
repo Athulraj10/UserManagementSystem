@@ -18,3 +18,4 @@ const RegisterScreen = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const {userInfo} = useSelector((state)=>state.auth)
