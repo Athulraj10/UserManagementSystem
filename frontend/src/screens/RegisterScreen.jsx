@@ -19,3 +19,5 @@ const RegisterScreen = () => {
   const dispatch = useDispatch();
 
   const {userInfo} = useSelector((state)=>state.auth)
+
+  const [register,{ isLoading }] = useRegisterMutation();
