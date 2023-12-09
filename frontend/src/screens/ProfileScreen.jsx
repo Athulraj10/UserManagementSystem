@@ -33,4 +33,13 @@ const ProfileScreen = () => {
     e.preventDefault();
     if(password !== confirmPassword){
         toast.error('Passwords do not match!!')
-    }
+    }else{
+      try {
+        const formData = new FormData();
+        formData.append('_id', userInfo._id);
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('password', password);
+        formData.append('file', image);
+
+     
