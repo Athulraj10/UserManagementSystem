@@ -42,4 +42,4 @@ const ProfileScreen = () => {
         formData.append('password', password);
         formData.append('file', image);
 
-     
+        const res = await updateProfile(formData).unwrap();
