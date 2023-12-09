@@ -8,3 +8,10 @@ import { toast } from 'react-toastify';
 import Loader from '../components/Loader';
 import { setCredentials } from '../slices/authSlice';
 import { useUpdateUserMutation } from '../slices/usersApiSlice';
+
+const ProfileScreen = () => {
+  const [name,setName] = useState('');
+  const [email,setEmail] = useState('');
+  const [password,setPassword] = useState('');
+  const [confirmPassword,setConfirmPassword] = useState('');
+  const [image, setImage] = useState('')
