@@ -22,3 +22,9 @@ const ProfileScreen = () => {
   const {userInfo} = useSelector((state)=>state.auth)
 
   const [updateProfile,{ isLoading }] = useUpdateUserMutation();
+
+  useEffect(()=>{
+   setName(userInfo.name);
+   setEmail(userInfo.email);
+  },[userInfo.setName,userInfo.setEmail]);
+
