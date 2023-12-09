@@ -27,3 +27,10 @@ const RegisterScreen = () => {
         navigate('/');
     }
   },[navigate,userInfo]);
+
+
+  const submitHandler = async(e)=>{
+    e.preventDefault();
+    if(password !== confirmPassword){
+        toast.error('Passwords do not match!!')
+    }
