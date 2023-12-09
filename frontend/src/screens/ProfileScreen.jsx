@@ -15,3 +15,5 @@ const ProfileScreen = () => {
   const [password,setPassword] = useState('');
   const [confirmPassword,setConfirmPassword] = useState('');
   const [image, setImage] = useState('')
+
+  const navigate = useNavigate();
