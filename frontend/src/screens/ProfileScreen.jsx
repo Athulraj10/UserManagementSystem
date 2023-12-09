@@ -95,3 +95,10 @@ const ProfileScreen = () => {
               </Form.Control>
           </Form.Group>
 
+          <Form.Group className="my-2" controlId="image">
+            <Form.Label>Profile Picture</Form.Label>
+            <Form.Control
+              type="file"
+              onChange={(e) => setImage(e.target.files[0])}
+            ></Form.Control>
+          </Form.Group>
