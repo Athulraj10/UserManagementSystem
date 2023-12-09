@@ -93,3 +93,12 @@ const RegisterScreen = () => {
                 Sign Up
             </Button>
 
+            <Row className='py-3'>
+                <Col>
+                    Already Have Account? <Link to='/login'>Login</Link> 
+                </Col>
+            </Row>            
+        </Form>
+    </FormContainer>
+  )
+}
