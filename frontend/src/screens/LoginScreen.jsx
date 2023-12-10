@@ -25,3 +25,6 @@ const LoginScreen = () => {
         navigate('/');
     }
   },[navigate,userInfo]);
+
+  const submitHandler = async(e)=>{
+    e.preventDefault();
