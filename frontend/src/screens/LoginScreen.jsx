@@ -59,3 +59,9 @@ const LoginScreen = () => {
                 onChange={(e)=>{setPassword(e.target.value)}}>
                 </Form.Control>
             </Form.Group>
+
+            {isLoading && <Loader/>}
+
+            <Button type='submit' variant='primary' className='mt-3'>
+                Sign In
+            </Button>
