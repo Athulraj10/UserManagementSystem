@@ -24,4 +24,4 @@ const LoginScreen = () => {
     if(userInfo){
         navigate('/');
     }
-  }
+  },[navigate,userInfo]);
