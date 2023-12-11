@@ -47,6 +47,13 @@ const TableComponent = () => {
     <>
       <Form>
         <Form.Group className="d-flex my-3" controlId="exampleForm.ControlInput1">
+          <Form.Control
+            style={{ width: "500px" }}
+            value={search}
+            type="text"
+            placeholder="Search Here"
+            onChange={handleSearch}
+          />
 
 
 export default TableComponent;
