@@ -5,7 +5,7 @@ const AdminHomeScreen = () => {
   
   return (
     <div>
-      <TableComponent/>
+      
     </div>
   )
 }
