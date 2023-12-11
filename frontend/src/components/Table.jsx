@@ -54,6 +54,37 @@ const TableComponent = () => {
             placeholder="Search Here"
             onChange={handleSearch}
           />
-
+        </Form.Group>
+      </Form>
+      <Table striped bordered hover responsive>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            filteredUsers.length !== 0 ?(
+          filteredUsers.map((user, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td style={{cursor:'pointer'}} onClick={()=>{deleteHandler(user._id)}}><FaRegTrashAlt/></td>
+            </tr>
+          ))):(
+            <tr>
+                <td colSpan={4} className="text-center">No users Available</td>
+            </tr>
+          )
+          }
+        </tbody>
+      </Table>
+    </>
+  );
+};
 
 export default TableComponent;
