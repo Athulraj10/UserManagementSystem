@@ -61,6 +61,8 @@ const AdminLoginScreen = () => {
             onChange={(e) => {
               setPassword(e.target.value);
             }}
+          ></Form.Control>
+        </Form.Group>
 
   );
 };
