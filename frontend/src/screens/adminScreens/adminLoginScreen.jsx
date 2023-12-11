@@ -41,6 +41,15 @@ const AdminLoginScreen = () => {
 
       <Form onSubmit={submitHandler}>
         <Form.Group className="my-2" controlId="email">
+          <Form.Label>Email Adress</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          ></Form.Control>
 
   );
 };
