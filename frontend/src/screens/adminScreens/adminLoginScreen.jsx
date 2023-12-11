@@ -36,41 +36,7 @@ const AdminLoginScreen = () => {
     }
   };
   return (
-    <FormContainer>
-      <h1>Admin Log in</h1>
-
-      <Form onSubmit={submitHandler}>
-        <Form.Group className="my-2" controlId="email">
-          <Form.Label>Email Adress</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          ></Form.Control>
-        </Form.Group>
-
-        <Form.Group className="my-2" controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          ></Form.Control>
-        </Form.Group>
-
-        {/* {isLoading && <Loader />} */}
-
-        <Button type="submit" variant="primary" className="mt-3">
-          Log In
-        </Button>
-      </Form>
-    </FormContainer>
+    
   );
 };
 
