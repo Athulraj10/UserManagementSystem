@@ -54,6 +54,7 @@ const AdminLoginScreen = () => {
 
         <Form.Group className="my-2" controlId="password">
           <Form.Label>Password</Form.Label>
+          <Form.Control
 
   );
 };
