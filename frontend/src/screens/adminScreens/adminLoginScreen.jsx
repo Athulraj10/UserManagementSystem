@@ -39,6 +39,9 @@ const AdminLoginScreen = () => {
     <FormContainer>
       <h1>Admin Log in</h1>
 
+      <Form onSubmit={submitHandler}>
+        <Form.Group className="my-2" controlId="email">
+
   );
 };
 
