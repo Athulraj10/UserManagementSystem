@@ -36,7 +36,9 @@ const AdminLoginScreen = () => {
     }
   };
   return (
-    
+    <FormContainer>
+      <h1>Admin Log in</h1>
+
   );
 };
 
