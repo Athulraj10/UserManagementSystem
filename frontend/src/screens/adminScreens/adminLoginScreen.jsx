@@ -64,6 +64,8 @@ const AdminLoginScreen = () => {
           ></Form.Control>
         </Form.Group>
 
+        {/* {isLoading && <Loader />} */}
+
   );
 };
 
