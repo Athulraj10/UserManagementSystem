@@ -24,6 +24,11 @@ const TableComponent = () => {
         const deleteSuccess = await deleteUser({id});
         toast.success('Deleted Successfully')
         setDeleted(!deleted)
+      } catch (error) {
+        toast.error(err?.data?.message || err.error)
+      }
+    }
+
 
 
 export default TableComponent;
