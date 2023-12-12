@@ -15,5 +15,9 @@ const TableComponent = () => {
   
     const [deleteUser] = useDeleteUserMutation();
 
+    const handleSearch = (e)=>{
+        setSearch(e.target.value)
+    }
+
 
 export default TableComponent;
