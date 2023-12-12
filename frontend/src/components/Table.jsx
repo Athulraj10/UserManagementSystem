@@ -19,5 +19,8 @@ const TableComponent = () => {
         setSearch(e.target.value)
     }
 
+    const deleteHandler = async (id)=>{
+      try {
+
 
 export default TableComponent;
