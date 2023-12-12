@@ -12,6 +12,8 @@ const TableComponent = () => {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState('');
   const [deleted, setDeleted] = useState(false)
+  
+    const [deleteUser] = useDeleteUserMutation();
 
 
 export default TableComponent;
