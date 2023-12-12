@@ -29,6 +29,15 @@ const TableComponent = () => {
       }
     }
 
+    useEffect(() => {
+      const fetchUsers = async ()=>{
+        const userDetails = await axios.get('http://localhost:8000/api/admin/adminHome')
+        console.log(userDetails.data.userData)
+        setUsers(userDetails.data.userData);
+      }
+      fetchUsers();
+    },[deleted])
+
 
 
 export default TableComponent;
