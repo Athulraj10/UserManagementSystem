@@ -21,6 +21,9 @@ const TableComponent = () => {
 
     const deleteHandler = async (id)=>{
       try {
+        const deleteSuccess = await deleteUser({id});
+        toast.success('Deleted Successfully')
+        setDeleted(!deleted)
 
 
 export default TableComponent;
