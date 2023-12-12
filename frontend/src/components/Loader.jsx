@@ -11,5 +11,8 @@ const Loader = () => {
             margin:'auto',
             display:'block'
         }}
+        ></Spinner>
+    )
+}
 
 export default Loader;
