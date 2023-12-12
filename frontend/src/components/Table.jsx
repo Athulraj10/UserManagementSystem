@@ -9,5 +9,9 @@ import axios from 'axios'
 
 const TableComponent = () => {
 
+  const [users, setUsers] = useState([]);
+  const [search, setSearch] = useState('');
+  const [deleted, setDeleted] = useState(false)
+
 
 export default TableComponent;
