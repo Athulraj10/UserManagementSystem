@@ -38,6 +38,15 @@ const TableComponent = () => {
       fetchUsers();
     },[deleted])
 
+    const filteredUsers = users.filter((user) =>
+    user.name.toLowerCase().includes(search.toLowerCase()) ||
+    user.email.toLowerCase().includes(search.toLowerCase())
+  );
+
+  return (
+    <>
+      <Form>
+        <Form.Group className="d-flex my-3" controlId="exampleForm.ControlInput1">
 
 
 export default TableComponent;
