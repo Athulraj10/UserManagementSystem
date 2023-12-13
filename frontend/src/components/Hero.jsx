@@ -29,3 +29,5 @@ const Hero = () => {
               `Please log in before you proceed..`
             }
           </p>
+          {
+            userInfo ?
