@@ -29,7 +29,11 @@ const Header = () => {
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              { userInfo ? 
+              { userInfo ? (
+                <>
+                  <Col xs={6} md={4}>
+                    <Image style={{width:"40px",marginRight:"20px"}} src={userInfo.image?`http://localhost:8000/images/${userInfo.image}`:null} roundedCircle />
+                  </Col>
             </Nav>
           </Navbar.Collapse>
         </Container>
