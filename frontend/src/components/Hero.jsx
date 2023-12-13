@@ -19,3 +19,5 @@ const Hero = () => {
             ):(
               null
             )
+          }
+          <h1 className='text-center mb-4'>{userInfo?`Hi ${userInfo.name}`:`Hi User`}</h1>
