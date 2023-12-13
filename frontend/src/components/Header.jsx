@@ -51,6 +51,9 @@ const Header = () => {
                     </Nav.Link>
                   </LinkContainer>
                   <LinkContainer to='/register'>
+                    <Nav.Link>
+                        <FaSignOutAlt /> Sign Up
+                    </Nav.Link>
                  
             </Nav>
           </Navbar.Collapse>
