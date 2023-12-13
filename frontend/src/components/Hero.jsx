@@ -44,3 +44,4 @@ const Hero = () => {
                     Sign In
                     </Button>
                 </LinkContainer>
+                <LinkContainer to='/register'>
