@@ -40,3 +40,7 @@ const Hero = () => {
             ) : (
               <div className='d-flex'>
                 <LinkContainer to='/login'>
+                    <Button variant='primary' className='me-3'>
+                    Sign In
+                    </Button>
+                </LinkContainer>
