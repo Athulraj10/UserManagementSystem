@@ -21,3 +21,5 @@ const Hero = () => {
             )
           }
           <h1 className='text-center mb-4'>{userInfo?`Hi ${userInfo.name}`:`Hi User`}</h1>
+          <p className='text-center mb-4'>
+            {
