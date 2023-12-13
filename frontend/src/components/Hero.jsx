@@ -5,3 +5,6 @@ import { LinkContainer } from 'react-router-bootstrap';
 const Hero = () => {
 
   const {userInfo} = useSelector((state)=>state.auth)
+  
+  return (
+    <div className=' py-5'>
