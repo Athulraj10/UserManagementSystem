@@ -34,6 +34,12 @@ const Header = () => {
                   <Col xs={6} md={4}>
                     <Image style={{width:"40px",marginRight:"20px"}} src={userInfo.image?`http://localhost:8000/images/${userInfo.image}`:null} roundedCircle />
                   </Col>
+                  <NavDropdown title={userInfo.name} id='username'>
+                    <LinkContainer to='/profile'>
+                      <NavDropdown.Item>
+                        Profile
+                      </NavDropdown.Item>
+                    
             </Nav>
           </Navbar.Collapse>
         </Container>
