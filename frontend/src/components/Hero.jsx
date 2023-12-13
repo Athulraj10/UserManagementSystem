@@ -31,3 +31,6 @@ const Hero = () => {
           </p>
           {
             userInfo ?
+            (
+              <LinkContainer to='/profile'>
+                  <Button variant='success' className='me-3'>
