@@ -45,3 +45,18 @@ const Hero = () => {
                     </Button>
                 </LinkContainer>
                 <LinkContainer to='/register'>
+                    <Button variant='secondary'>
+                    Sign Up
+                    </Button>
+                </LinkContainer>
+              </div>
+            )
+          }
+          
+        </Card>
+      </Container>
+    </div>
+  );
+};
+
+export default Hero;
