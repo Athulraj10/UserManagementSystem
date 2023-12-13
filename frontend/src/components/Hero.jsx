@@ -25,3 +25,5 @@ const Hero = () => {
             {
               userInfo ? 
               `You have successfully Logged In..` 
+              : 
+              `Please log in before you proceed..`
