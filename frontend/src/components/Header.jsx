@@ -39,7 +39,10 @@ const Header = () => {
                       <NavDropdown.Item>
                         Profile
                       </NavDropdown.Item>
-                    
+                    </LinkContainer>
+                    <NavDropdown.Item onClick={ logoutHandler }>Logout</NavDropdown.Item>
+                  </NavDropdown>
+                </>
             </Nav>
           </Navbar.Collapse>
         </Container>
