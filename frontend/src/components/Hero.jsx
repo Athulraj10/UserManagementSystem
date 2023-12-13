@@ -27,3 +27,5 @@ const Hero = () => {
               `You have successfully Logged In..` 
               : 
               `Please log in before you proceed..`
+            }
+          </p>
