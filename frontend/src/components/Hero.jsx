@@ -37,3 +37,6 @@ const Hero = () => {
                   Go to Profile
                   </Button>
               </LinkContainer>
+            ) : (
+              <div className='d-flex'>
+                <LinkContainer to='/login'>
