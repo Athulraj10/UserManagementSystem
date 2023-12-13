@@ -54,7 +54,9 @@ const Header = () => {
                     <Nav.Link>
                         <FaSignOutAlt /> Sign Up
                     </Nav.Link>
-                 
+                  </LinkContainer>
+                </>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
