@@ -12,3 +12,7 @@ const Hero = () => {
         <Card className='p-5 d-flex flex-column align-items-center hero-card bg-light w-75'>
           {
             userInfo?
+            (
+              <Col xs={12} className='d-flex justify-content-center mb-2'>
+                <Image style={{width:"100px",marginRight:"20px"}} src={userInfo.image?`http://localhost:8000/images/${userInfo.image}`:null} roundedCircle />
+              </Col>
