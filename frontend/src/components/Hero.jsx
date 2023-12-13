@@ -16,3 +16,6 @@ const Hero = () => {
               <Col xs={12} className='d-flex justify-content-center mb-2'>
                 <Image style={{width:"100px",marginRight:"20px"}} src={userInfo.image?`http://localhost:8000/images/${userInfo.image}`:null} roundedCircle />
               </Col>
+            ):(
+              null
+            )
