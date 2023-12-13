@@ -34,3 +34,6 @@ const Hero = () => {
             (
               <LinkContainer to='/profile'>
                   <Button variant='success' className='me-3'>
+                  Go to Profile
+                  </Button>
+              </LinkContainer>
