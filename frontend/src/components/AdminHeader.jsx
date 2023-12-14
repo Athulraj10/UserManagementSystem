@@ -6,3 +6,9 @@ import { useAdminLogoutMutation } from "../slices/adminSlices/adminsApiSlice";
 import { adminLogout } from "../slices/adminSlices/adminAuthSlice";
 import { useNavigate } from "react-router-dom";
 
+function AdminHeader() {
+  const { adminInfo } = useSelector((state) => state.adminAuth);
+
+}
+
+export default AdminHeader;
