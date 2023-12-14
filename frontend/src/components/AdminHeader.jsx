@@ -26,7 +26,14 @@ function AdminHeader() {
   return (
     <header>
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
-        
+      <Container>
+          
+          <Navbar.Brand>Admin</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+
+
+        </Container>
       </Navbar>
     </header>
   );
