@@ -23,7 +23,12 @@ function AdminHeader() {
       console.log(error);
     }
   };
-
+  return (
+    <header>
+      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+        
+      </Navbar>
+    </header>
   );
 }
 
