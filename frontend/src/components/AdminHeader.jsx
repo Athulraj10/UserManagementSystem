@@ -39,10 +39,10 @@ function AdminHeader() {
                     <FaSignOutAlt/> Logout
                   </Nav.Link>
                 </>
-              ) 
-
-
-              
+              ) : (
+                <>
+                </>
+              )}
             </Nav>
           </Navbar.Collapse>
 
