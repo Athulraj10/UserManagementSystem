@@ -32,7 +32,18 @@ function AdminHeader() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav">
-            
+          <Nav className="ms-auto">
+              {adminInfo ? (
+                <>
+                  <Nav.Link  onClick={logoutHandler}>
+                    <FaSignOutAlt/> Logout
+                  </Nav.Link>
+                </>
+              ) 
+
+
+              
+            </Nav>
           </Navbar.Collapse>
 
 
